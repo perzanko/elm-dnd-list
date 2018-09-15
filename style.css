@@ -1,0 +1,176 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.todomvc-wrapper {
+    visibility: visible !important;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+body {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    background: #f5f5f5;
+    color: #4d4d4d;
+    min-width: 230px;
+    /* max-width: 550px; */
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-weight: 300;
+}
+
+button,
+input[type="checkbox"] {
+    outline: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.todomvc-wrapper {
+    visibility: visible !important;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+body {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    background: #f5f5f5;
+    color: #4d4d4d;
+    min-width: 230px;
+    /* max-width: 550px; */
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-weight: 300;
+}
+
+button,
+input[type="checkbox"] {
+    outline: none;
+}
+
+
+
+.dnd {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.dnd > h1 {
+    margin: 0 auto 50px auto;
+    font-weight: 300;
+    text-align: center;
+}
+
+.dnd.is-dragging {
+    cursor: move !important;
+}
+
+.dnd__list {
+    max-width: 550px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    border: 1px solid #eee;
+    padding: 0 10px;
+    box-shadow: 0 6px 60px 0px rgba(0, 0, 0, 0.08);
+}
+
+.dnd__item {
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: block;
+    padding: 10px;
+    border: 1px solid #f2f2f2;
+    cursor: move;
+}
+
+.dnd__item:active {
+    cursor: move;
+}
+
+.dnd__item:hover {
+    transform: translateY(-1px);
+    transition:
+        transform .15s ease-in,
+        box-shadow .15s ease-in;
+    box-shadow: 0 3px 30px 0px rgba(0, 0, 0, 0.08);
+}
+
+.dnd__item--is-dragging {
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dnd__item p {
+    margin: 0;
+}
+
+.dnd__item h2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+}
+
+.dnd__item h2 span {
+    box-shadow: 0 0px 5px 1px rgba(0,0,0, 0.05);
+    display: flex;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #f3f3f3;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 1.1;
+    margin: 0;
+    margin-right: 10px;
+}
+                

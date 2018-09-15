@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>perzanko/dnd-list</title>
+  <script type="text/javascript" src="elm.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app"></div>
+</body>
+
+<script type="text/javascript">
+  var app = Elm.Main.init({
+    node: document.getElementById('app'),
+    flags: [
+      { id: 1, name: 'Lorem ipsum', content: 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo.', order: 1, dragging: false },
+      { id: 2, name: 'Amet Venenatis', content: 'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum.', order: 2, dragging: false },
+      { id: 3, name: 'Bibendum Euismod Egestas', content: 'Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper.', order: 3, dragging: false },
+      { id: 4, name: 'Elit Egestas Euismod', content: 'Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.', order: 4, dragging: false },
+      { id: 5, name: 'Amet Venenatis Euismod', content: 'Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.', order: 5, dragging: false },
+      { id: 6, name: 'Egestas Tristique', content: 'Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.', order: 6, dragging: false },
+    ],
+  });
+</script>
+
+</html>
