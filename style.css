@@ -141,7 +141,7 @@ input[type="checkbox"] {
     box-shadow: 0 3px 30px 0px rgba(0, 0, 0, 0.08);
 }
 
-.dnd__item--is-dragging {
+.dnd__item.is-dragging {
     overflow: hidden;
     opacity: 0;
 }

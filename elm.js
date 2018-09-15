@@ -4770,6 +4770,8 @@ var author$project$Main$init = function (list) {
 			{m: list}),
 		elm$core$Platform$Cmd$none);
 };
+var author$project$Main$DOWN = 1;
+var author$project$Main$UP = 0;
 var elm$core$Basics$neq = _Utils_notEqual;
 var elm$core$List$foldrHelper = F4(
 	function (fn, acc, ctr, ls) {
@@ -4921,14 +4923,14 @@ var author$project$Main$update = F2(
 					var _n3 = elm$core$List$head(currentEntry);
 					if (!_n3.$) {
 						var x = _n3.a;
-						return (_Utils_cmp(x.g, entry.g) < 0) ? 'DOWN' : 'UP';
+						return (_Utils_cmp(x.g, entry.g) < 0) ? 1 : 0;
 					} else {
-						return 'DOWN';
+						return 1;
 					}
 				}();
 				var _n1 = A2(
 					elm$core$List$partition,
-					(direction === 'DOWN') ? function (x) {
+					(direction === 1) ? function (x) {
 						return _Utils_cmp(x.g, entry.g) < 1;
 					} : function (x) {
 						return _Utils_cmp(x.g, entry.g) < 0;
@@ -4963,11 +4965,11 @@ var author$project$Main$update = F2(
 					elm$core$Platform$Cmd$none);
 		}
 	});
-var author$project$Main$OnDragEndMsg = {$: 1};
-var author$project$Main$OnDragOverMsg = function (a) {
+var author$project$Main$EndDragging = {$: 1};
+var author$project$Main$ReorderEntriesOverDragging = function (a) {
 	return {$: 2, a: a};
 };
-var author$project$Main$OnDragStartMsg = function (a) {
+var author$project$Main$StartDragging = function (a) {
 	return {$: 0, a: a};
 };
 var elm$virtual_dom$VirtualDom$Normal = function (a) {
@@ -5042,12 +5044,15 @@ var author$project$Main$view = function (model) {
 			return $.g;
 		},
 		model.m);
+	var isDraggingClass = function (cond) {
+		return cond ? ' is-dragging' : '';
+	};
 	return A2(
 		elm$html$Html$div,
 		_List_fromArray(
 			[
 				elm$html$Html$Attributes$class(
-				'dnd' + (model.t ? ' is-dragging' : ''))
+				'dnd' + isDraggingClass(model.t))
 			]),
 		_List_fromArray(
 			[
@@ -5072,13 +5077,14 @@ var author$project$Main$view = function (model) {
 							_List_fromArray(
 								[
 									elm$html$Html$Attributes$class(
-									'dnd__item' + (_Utils_eq(entry.s, model.l) ? ' dnd__item--is-dragging' : '')),
+									'dnd__item' + isDraggingClass(
+										_Utils_eq(entry.s, model.l))),
 									elm$html$Html$Attributes$draggable('true'),
 									author$project$Main$onDragStart(
-									author$project$Main$OnDragStartMsg(entry)),
-									author$project$Main$onDragEnd(author$project$Main$OnDragEndMsg),
+									author$project$Main$StartDragging(entry)),
+									author$project$Main$onDragEnd(author$project$Main$EndDragging),
 									author$project$Main$onDragOver(
-									author$project$Main$OnDragOverMsg(entry))
+									author$project$Main$ReorderEntriesOverDragging(entry))
 								]),
 							_List_fromArray(
 								[
