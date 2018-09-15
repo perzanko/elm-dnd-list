@@ -1,2 +1,2 @@
-# dnd-list
+# elm-dnd-list
 Drag and drop list in Elm.
